@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TZ Grow Media</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  
+  <section class="business-form d-flex justify-content-center">
+    <form class="row g-4 m-0 needs-validation col-12 col-sm-10 col-lg-6" novalidate>
+      <h3 class="mb-0">Личная информация</h3>
+      <div class="position-relative">
+        <input type="text" class="form-control" id="validationTooltip01" placeholder="Ваше имя" value="" required>
+        <div class="invalid-tooltip">
+          Пожалуйста, напишите имя
+        </div>
+      </div>
+      <div class="position-relative">
+        <input type="email" class="form-control" id="validationTooltip02" placeholder="Ваш email" value="" required>
+        <div class="invalid-tooltip">
+          Пожалуйста, введите email
+        </div>
+      </div>
+      <div class="position-relative">
+        <div class="input-group has-validation">
+          <input type="tel" class="form-control" value="+375(__)___-__-__" id="validationTooltip03" required>
+          <div class="invalid-tooltip">
+            Пожалуйста, введите телефон
+          </div>
+        </div>
+      </div>
+      <h3 class="mb-0">Информация о бизнесе</h3>
+      <div class="position-relative">
+        <!-- <label for="validationTooltip03" class="form-label">Город</label> -->
+        <input type="number" step="0.01" class="form-control" id="validationTooltip03" placeholder="Ожидаемый оборот" required>
+        <div class="invalid-tooltip">
+          Укажите ожидаемый оборот
+        </div>
+      </div>
+      <div class="position-relative">
+        <select class="form-select" id="validationTooltip04" required>
+          <option selected disabled value="">Выбор индустрии</option>
+          <option>Индустрия 1</option>
+          <option>Индустрия 2</option>
+          <option>Индустрия 3</option>
+        </select>
+        <div class="invalid-tooltip">
+          Укажите индустрию
+        </div>
+      </div>
+      <div class="position-relative">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Я принимаю правила сервиса
+          </label>
+          <div class="invalid-tooltip">
+            Вы не приняли условия
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Отправить форму</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
