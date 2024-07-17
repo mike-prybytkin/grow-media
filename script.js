@@ -2,6 +2,7 @@
   const form = document.querySelector('.business-form')
   const phoneInput = document.querySelector('.business-form .form-control[type="tel"]');
   const toast = new bootstrap.Toast(document.querySelector('#liveToast'))
+  const fadeElements = document.querySelectorAll('.fade-out');
 
   formHandler(form)
 
