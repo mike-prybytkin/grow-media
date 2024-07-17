@@ -1,0 +1,36 @@
+:root {
+  --color-light: #fff;
+  --color-btn-bg: #5361f0;
+  --color-btn-text: #fff;
+}
+
+.business-form {
+  gap: 2rem;
+}
+
+.business-form .form-field {
+  background: var(--color-light);
+}
+
+.business-form .invalid-tooltip {
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 2px 8px;
+  transition: all .3s;
+  z-index: -1;
+  font-size: 11px;
+  opacity: 0;
+}
+
+.business-form.was-validated :invalid~.invalid-tooltip {
+  display: block;
+  top: 100%;
+  opacity: 1;
+}
+
+.business-form button[type="submit"] {
+  border-color: var(--color-btn-bg);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+}

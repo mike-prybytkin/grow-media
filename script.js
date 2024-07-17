@@ -1,20 +1,31 @@
-// Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
-(function () {
-  'use strict'
+(() => {
+  const form = document.querySelector('.business-form')
+  const phoneInput = document.querySelector('.business-form .form-control[type="tel"]');
+  const toast = new bootstrap.Toast(document.querySelector('#liveToast'))
 
-  // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
-  var forms = document.querySelectorAll('.needs-validation')
+  formHandler(form)
 
-  // Зацикливайтесь на них и предотвращайте отправку
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+  function formHandler (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      if (form.checkValidity()) {
+        const data = new FormData(form)
+        submitSuccess(data);
+        return
+      } 
+      form.classList.add('was-validated')
+    }, false)
+  }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
+  const submitSuccess = (formData) => {
+    console.log(formData)
+    form.reset();
+    form.classList.remove('was-validated')
+    toast.show()
+    mask.updateValue()
+  }
+
+  const mask = new IMask(phoneInput, {
+    mask: '+{375}(00)000-00-00',
+  })
 })()
